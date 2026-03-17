@@ -1,0 +1,112 @@
+<!-- assistant.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleAI - ИИ Ассистент</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span>StyleAI</span>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="features.html">Функции</a></li>
+                        <li><a href="how-it-works.html">Как работает</a></li>
+                        <li><a href="wardrobe.html">Гардероб</a></li>
+                        <li><a href="outfits.html">Образы</a></li>
+                        <li><a href="assistant.html">ИИ Ассистент</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button class="btn-secondary" id="loginBtn">Войти</button>
+                    <button class="btn-primary" id="registerBtn">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ИИ Ассистент -->
+    <section class="ai-assistant" id="ai-assistant">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ваш личный ИИ Ассистент</h2>
+                <p>Задавайте вопросы о стиле, получайте советы и рекомендации в реальном времени</p>
+            </div>
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages"></div>
+                <div class="chat-input">
+                    <input type="text" id="chatInput" placeholder="Спросите о стиле, например: 'Что надеть на свидание?'">
+                    <button class="btn-primary" id="sendMessageBtn">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <span>StyleAI</span>
+                    </div>
+                    <p>Ваш персональный стилист с искусственным интеллектом. Экономьте время, выглядите безупречно.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Возможности</h4>
+                    <ul>
+                        <li><a href="features.html">Анализ гардероба</a></li>
+                        <li><a href="outfits.html">Подбор образов</a></li>
+                        <li><a href="wardrobe.html">Персональный шопинг</a></li>
+                        <li><a href="assistant.html">ИИ Ассистент</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="how-it-works.html">Помощь</a></li>
+                        <li><a href="#">Советы по стилю</a></li>
+                        <li><a href="#">Сообщество</a></li>
+                        <li><a href="#">Связаться с нами</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Компания</h4>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Карьера</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 StyleAI. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для авторизации -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="authForm">
+                <!-- Форма будет генерироваться здесь -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

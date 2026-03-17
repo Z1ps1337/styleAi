@@ -1,0 +1,131 @@
+<!-- how-it-works.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleAI - Как работает</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span>StyleAI</span>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="features.html">Функции</a></li>
+                        <li><a href="how-it-works.html">Как работает</a></li>
+                        <li><a href="wardrobe.html">Гардероб</a></li>
+                        <li><a href="outfits.html">Образы</a></li>
+                        <li><a href="assistant.html">ИИ Ассистент</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button class="btn-secondary" id="loginBtn">Войти</button>
+                    <button class="btn-primary" id="registerBtn">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Как это работает -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>Как работает StyleAI</h2>
+                <p>Всего 4 простых шага к вашему идеальному гардеробу</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon upload"></div>
+                    <h3>Загрузите одежду</h3>
+                    <p>Сфотографируйте каждую вещь из вашего гардероба. ИИ автоматически определит тип, цвет и стиль одежды.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon analyze"></div>
+                    <h3>Анализ ИИ</h3>
+                    <p>Наш искусственный интеллект анализирует ваш гардероб, учитывая цветовые сочетания, стили и тренды.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon combine"></div>
+                    <h3>Подбор образов</h3>
+                    <p>ИИ создает стильные комбинации на основе ваших вещей и выбранного мероприятия.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <div class="step-icon result"></div>
+                    <h3>Готовый результат</h3>
+                    <p>Получайте готовые образы с фотографиями вашей одежды. Сохраняйте понравившиеся в избранное.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <span>StyleAI</span>
+                    </div>
+                    <p>Ваш персональный стилист с искусственным интеллектом. Экономьте время, выглядите безупречно.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Возможности</h4>
+                    <ul>
+                        <li><a href="features.html">Анализ гардероба</a></li>
+                        <li><a href="outfits.html">Подбор образов</a></li>
+                        <li><a href="wardrobe.html">Персональный шопинг</a></li>
+                        <li><a href="assistant.html">ИИ Ассистент</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="how-it-works.html">Помощь</a></li>
+                        <li><a href="#">Советы по стилю</a></li>
+                        <li><a href="#">Сообщество</a></li>
+                        <li><a href="#">Связаться с нами</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Компания</h4>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Карьера</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 StyleAI. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для авторизации -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="authForm">
+                <!-- Форма будет генерироваться здесь -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

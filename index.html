@@ -1,0 +1,138 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleAI - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span>StyleAI</span>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="features.html">Функции</a></li>
+                        <li><a href="how-it-works.html">Как работает</a></li>
+                        <li><a href="wardrobe.html">Гардероб</a></li>
+                        <li><a href="outfits.html">Образы</a></li>
+                        <li><a href="assistant.html">ИИ Ассистент</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button class="btn-secondary" id="loginBtn">Войти</button>
+                    <button class="btn-primary" id="registerBtn">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Герой секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Ваш персональный стилист с искусственным интеллектом</h1>
+                <p class="hero-description">Загружайте свою одежду, выбирайте мероприятие и получайте идеальные образы от настоящего ИИ. Больше никогда не тратьте время на подбор одежды!</p>
+                <div class="hero-actions">
+                    <button class="btn-primary large" id="startBtn">Начать сейчас</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">5000+</div>
+                        <div class="stat-label">Созданных образов</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Довольных пользователей</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">15мин</div>
+                        <div class="stat-label">Экономия времени в день</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="style-showcase">
+                    <div class="showcase-item">
+                        <div class="item-image" style="background-image: url('images/povsednevniy.jpg')"></div>
+                        <div class="item-label">Повседневный стиль</div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="item-image" style="background-image: url('images/delovoy.jpg')"></div>
+                        <div class="item-label">Деловой образ</div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="item-image" style="background-image: url('images/vecherniy.jpg')"></div>
+                        <div class="item-label">Вечерний выход</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <span>StyleAI</span>
+                    </div>
+                    <p>Ваш персональный стилист с искусственным интеллектом. Экономьте время, выглядите безупречно.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Возможности</h4>
+                    <ul>
+                        <li><a href="features.html">Анализ гардероба</a></li>
+                        <li><a href="outfits.html">Подбор образов</a></li>
+                        <li><a href="wardrobe.html">Персональный шопинг</a></li>
+                        <li><a href="assistant.html">ИИ Ассистент</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="how-it-works.html">Помощь</a></li>
+                        <li><a href="#">Советы по стилю</a></li>
+                        <li><a href="#">Сообщество</a></li>
+                        <li><a href="#">Связаться с нами</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Компания</h4>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Карьера</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 StyleAI. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для авторизации -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="authForm">
+                <!-- Форма будет генерироваться здесь -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

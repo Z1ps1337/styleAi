@@ -1,0 +1,221 @@
+<!-- outfits.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleAI - Образы</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span>StyleAI</span>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="features.html">Функции</a></li>
+                        <li><a href="how-it-works.html">Как работает</a></li>
+                        <li><a href="wardrobe.html">Гардероб</a></li>
+                        <li><a href="outfits.html">Образы</a></li>
+                        <li><a href="assistant.html">ИИ Ассистент</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button class="btn-secondary" id="loginBtn">Войти</button>
+                    <button class="btn-primary" id="registerBtn">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Быстрый подбор -->
+    <section class="quick-setup" id="quickSetup">
+        <div class="container">
+            <h2 class="section-title">Создайте образ за 2 минуты</h2>
+            <div class="setup-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <h3>Загрузите гардероб</h3>
+                    <p>Добавьте фотографии вашей одежды</p>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-number">2</div>
+                    <h3>Выберите мероприятие</h3>
+                    <p>Куда вы направляетесь?</p>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <h3>Получите образы</h3>
+                    <p>ИИ подберет идеальные комбинации</p>
+                </div>
+            </div>
+
+            <!-- Шаг 1: Загрузка гардероба -->
+            <div class="setup-content active" id="step1-content">
+                <div class="upload-section">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">
+                            <div class="upload-cloud"></div>
+                        </div>
+                        <h3>Перетащите сюда фотографии вашей одежды</h3>
+                        <p>Поддерживаются JPG, PNG. Максимальный размер 10MB</p>
+                        <button class="btn-outline" id="selectFilesBtn">Выбрать файлы</button>
+                        <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
+                    </div>
+                    
+                    <div class="uploaded-preview" id="uploadedPreview" style="display: none;">
+                        <h4>Загруженные вещи:</h4>
+                        <div class="preview-grid" id="previewGrid"></div>
+                    </div>
+                    
+                    <div class="upload-progress" id="uploadProgress" style="display: none;">
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <p>Обработка изображений ИИ...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Шаг 2: Выбор мероприятия -->
+            <div class="setup-content" id="step2-content">
+                <div class="occasion-selection">
+                    <h3>Куда вы направляетесь?</h3>
+                    <div class="occasion-grid">
+                        <div class="occasion-card" data-occasion="office">
+                            <div class="occasion-icon business"></div>
+                            <h4>Офис / Работа</h4>
+                            <p>Деловой стиль для рабочей атмосферы</p>
+                        </div>
+                        <div class="occasion-card" data-occasion="casual">
+                            <div class="occasion-icon casual"></div>
+                            <h4>Повседневно</h4>
+                            <p>Удобные образы для everyday носки</p>
+                        </div>
+                        <div class="occasion-card" data-occasion="date">
+                            <div class="occasion-icon date"></div>
+                            <h4>Свидание</h4>
+                            <p>Романтичные и привлекательные образы</p>
+                        </div>
+                        <div class="occasion-card" data-occasion="event">
+                            <div class="occasion-icon event"></div>
+                            <h4>Мероприятие</h4>
+                            <p>Торжественные и элегантные наряды</p>
+                        </div>
+                        <div class="occasion-card" data-occasion="sport">
+                            <div class="occasion-icon sport"></div>
+                            <h4>Спорт / Активный отдых</h4>
+                            <p>Комфортная и функциональная одежда</p>
+                        </div>
+                        <div class="occasion-card" data-occasion="travel">
+                            <div class="occasion-icon travel"></div>
+                            <h4>Путешествие</h4>
+                            <p>Универсальные образы для поездок</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Шаг 3: Результаты -->
+            <div class="setup-content" id="step3-content">
+                <div class="results-section">
+                    <h3>ИИ подобрал для вас образы</h3>
+                    <div class="outfit-controls">
+                        <button class="btn-outline" id="regenerateBtn">Сгенерировать другие образы</button>
+                        <button class="btn-outline" id="findAlternativesBtn">Найти альтернативы в магазинах</button>
+                    </div>
+                    <div class="outfits-grid" id="outfitsGrid">
+                        <!-- Образы будут генерироваться здесь -->
+                    </div>
+                    <div class="ai-suggestions" id="aiSuggestions" style="display: none;">
+                        <h4>Рекомендуем дополнить гардероб</h4>
+                        <div class="suggestions-grid" id="suggestionsGrid">
+                            <!-- Предложения будут добавляться здесь -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="setup-navigation">
+                <button class="btn-secondary" id="prevBtn" disabled>Назад</button>
+                <button class="btn-primary" id="nextBtn">Далее</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <span>StyleAI</span>
+                    </div>
+                    <p>Ваш персональный стилист с искусственным интеллектом. Экономьте время, выглядите безупречно.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Возможности</h4>
+                    <ul>
+                        <li><a href="features.html">Анализ гардероба</a></li>
+                        <li><a href="outfits.html">Подбор образов</a></li>
+                        <li><a href="wardrobe.html">Персональный шопинг</a></li>
+                        <li><a href="assistant.html">ИИ Ассистент</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="how-it-works.html">Помощь</a></li>
+                        <li><a href="#">Советы по стилю</a></li>
+                        <li><a href="#">Сообщество</a></li>
+                        <li><a href="#">Связаться с нами</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Компания</h4>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Карьера</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 StyleAI. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="outfitModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-outfit-view" id="modalOutfitView">
+                <!-- Контент модального окна -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для авторизации -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="authForm">
+                <!-- Форма будет генерироваться здесь -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/upload.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
